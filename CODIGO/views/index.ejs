@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD DE UPLOAD</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #00ff00;
+            margin-top: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        form input[type="file"], form input[type="submit"] {
+            background-color: #333;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        form input[type="file"] {
+            width: 300px;
+        }
+
+        form input[type="submit"] {
+            cursor: pointer;
+        }
+
+        hr {
+            border-color: #666;
+            margin: 20px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+
+        tr:hover {
+            background-color: #555;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #00dd00;
+        }
+
+        .button-group a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>ENVIAR ARQUIVOS</h2>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    UPLOAD:
+    <input type="file" name="fileToUpload" id="fileToUpload" onchange="enableSubmit()"> <br>
+    <input type="submit" value="ENVIAR" name="submit" id="submitButton" disabled> 
+</form>
+
+<script>
+    function enableSubmit() {
+        var fileInput = document.getElementById('fileToUpload');
+        var submitButton = document.getElementById('submitButton');
+        if (fileInput.files.length > 0) {
+            submitButton.disabled = false; 
+            submitButton.style.backgroundColor = "#4CAF50"; 
+        } 
+        else {
+            submitButton.disabled = true; 
+            submitButton.style.backgroundColor = "#888"; 
+        }
+    }
+</script>
+
+<hr>
+<h2>ARQUIVOS</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>TAMANHO</th>
+        <th>TIPO</th>
+        <th>DATA</th>
+        <th>AÇÃO</th>
+    </tr>
+    <% files.forEach(file => { %>
+        <tr>
+            <td><%= file.id %></td>
+            <td><%= path.basename(file.name, path.extname(file.name)) %></td>
+            <td><%= file.size %></td>
+            <td><%= file.mimetype %></td>
+            <td><%= file.modified_at.toLocaleString() %></td>
+            <td class="button-group">
+                <a href='view/<%= file.id %>'>VER</a>
+                | <a href='delete/<%= file.id %>'>APAGAR</a>
+                | <a href='edit/<%= file.id %>'>EDITAR</a>
+            </td>
+        </tr>
+    <% }) %>
+</table>
+</body>
+</html>
