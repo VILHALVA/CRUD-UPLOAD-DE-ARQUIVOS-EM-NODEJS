@@ -64,8 +64,7 @@ unzip CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.zip
       - Para manter o MongoDB em execução enquanto você estiver usando sua aplicação Python, é importante manter o terminal aberto onde você iniciou o servidor MongoDB.
 
 2. **Importar o `DATABASE.json`**
-   - Como você já baixou esse projeto com uma foto de modelo dentro de `CODIGO/public/uploads/NODEJS.png`, é de suma importância que você import o database.
-   Claro! Aqui estão as instruções para importar um arquivo JSON para o MongoDB via shell e via Compass:
+   - Como você já baixou esse projeto com uma foto de modelo dentro de `CODIGO/public/uploads/NODEJS.png`, é de suma importância que você import o database. Aqui estão as instruções para importar um arquivo JSON para o MongoDB via shell e via Compass:
 
    **Via Shell:**
 
