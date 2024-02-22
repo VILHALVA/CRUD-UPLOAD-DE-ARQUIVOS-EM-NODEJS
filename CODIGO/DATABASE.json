@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "65d6918537bab5d1f069398d"
+  },
+  "name": "NODEJS.png",
+  "size": 1905,
+  "mimetype": "image/png",
+  "uploaded_at": {
+    "$date": "2024-02-22T00:12:53.984Z"
+  },
+  "modified_at": {
+    "$date": "2024-02-22T00:13:07.324Z"
+  },
+  "__v": 0
+}]
