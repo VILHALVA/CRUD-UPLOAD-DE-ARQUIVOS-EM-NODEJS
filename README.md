@@ -63,10 +63,39 @@ unzip CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.zip
    3. **Manter o Terminal Aberto:**
       - Para manter o MongoDB em execução enquanto você estiver usando sua aplicação Python, é importante manter o terminal aberto onde você iniciou o servidor MongoDB.
 
-2. **Configuração do `APP.js`:** 
+2. **Importar o `DATABASE.json`**
+   - Como você já baixou esse projeto com uma foto de modelo dentro de `CODIGO/public/uploads/NODEJS.png`, é de suma importância que você import o database.
+   Claro! Aqui estão as instruções para importar um arquivo JSON para o MongoDB via shell e via Compass:
+
+   **Via Shell:**
+
+   1. Abra o terminal ou prompt de comando.
+   2. Navegue até o diretório onde o arquivo `DATABASE.json` está localizado, usando o comando `cd` (change directory).
+   3. Use o utilitário `mongoimport` para importar o arquivo JSON para o MongoDB. O comando é o seguinte:
+
+      ```bash
+      mongoimport --db file-upload --collection files --file DATABASE.json
+      ```
+
+   4. Dependendo da sua configuração, você pode precisar fornecer credenciais adicionais, como o nome de usuário e senha do MongoDB.
+
+   **Via Compass:**
+
+   1. Abra o MongoDB Compass.
+   2. Clique em "Connect" para se conectar a um servidor MongoDB. Insira as informações de conexão necessárias, como o endereço do servidor, a porta e suas credenciais, se aplicável. Em seguida, clique em "Connect".
+   3. Após se conectar, clique em "Create Database" para criar um novo banco de dados, se necessário.
+   4. Selecione o banco de dados onde deseja importar os dados.
+   5. Clique em "Collection" para criar uma nova coleção ou selecionar uma coleção existente onde deseja importar os dados.
+   6. Na coleção selecionada, clique em "Import Data".
+   7. No menu suspenso, selecione "JSON" como o formato de arquivo.
+   8. Clique em "Select File" e navegue até o local do arquivo `DATABASE.json`.
+   9. Selecione o arquivo e clique em "Open".
+   10. Clique em "Import" para iniciar o processo de importação.
+
+3. **Configuração do `APP.js`:** 
    - Certifique-se de ter um servidor MongoDB em execução localmente na porta padrão (27017), ou ajuste a URL de conexão de acordo com sua configuração.
 
-3. **Instalando as Depêndencias:**
+4. **Instalando as Depêndencias:**
 
    - Para instalar as dependências listadas no arquivo "package.json", você pode usar o comando `npm install` ou simplesmente `npm i` no terminal. Certifique-se de estar no diretório do seu projeto onde o arquivo "package.json" está localizado. O npm irá ler o arquivo "package.json" e instalar todas as dependências listadas nele. 
 
@@ -87,7 +116,7 @@ unzip CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.zip
    npm install express
    ```
 
-4. **Executando o Aplicativo:**
+5. **Executando o Aplicativo:**
 
    - Para subir o servidor, no diretório do seu [projeto](./CODIGO/APP.js), digite o seguinte comando no Terminal/CMD:
    ```bash
