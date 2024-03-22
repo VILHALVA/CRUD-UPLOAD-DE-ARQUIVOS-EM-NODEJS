@@ -9,7 +9,7 @@
 <img src="./IMAGENS/FOTO_6.png" align="center" width="500"> <br> 
 
 ## DESCRIÇÃO:
-O aplicativo [CRUD](./CRUD.md) de upload de arquivos, sendo um sistema de gerenciamento de arquivos que permite aos usuários fazer upload, visualizar, editar e excluir arquivos de imagem. 
+O aplicativo CRUD de upload de arquivos, sendo um sistema de gerenciamento de arquivos que permite aos usuários fazer upload, visualizar, editar e excluir arquivos de imagem. 
 
 O aplicativo permite aos usuários realizar as seguintes operações:
 
@@ -21,29 +21,8 @@ O aplicativo permite aos usuários realizar as seguintes operações:
 
 4. **Exclusão de Arquivos:** Os usuários podem excluir arquivos de imagem que não desejam mais manter. Isso é feito clicando no botão "Apagar" ao lado de cada arquivo na lista.
 
-## COMO USAR?
-### BAIXANDO O PROJETO:
-* Clone o repositório para o seu sistema local:
-
-```bash
-git clone https://github.com/VILHALVA/CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.git
-```
-
-* Navegue até o diretório do projeto.
-
-```bash
-cd CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS
-```
-
-* Descompacte o arquivo ZIP (se você baixou manualmente):
-
-```bash
-unzip CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.zip
-```
-
-### EXECUTANDO O PROJETO:
+## EXECUTANDO O PROJETO:
 1. **Conectando o MONGODB:**
-
    - Antes de você executar esse APP, você precisa conectar o MONGODB. Para deixar o MongoDB ligado e executando, você pode seguir estas instruções:
 
    1. **Iniciar o Servidor MongoDB:**
@@ -64,7 +43,8 @@ unzip CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.zip
       - Para manter o MongoDB em execução enquanto você estiver usando sua aplicação Python, é importante manter o terminal aberto onde você iniciou o servidor MongoDB.
 
 2. **Importar o `DATABASE.json`**
-   - Como você já baixou esse projeto com uma foto de modelo dentro de `CODIGO/public/uploads/NODEJS.png`, é de suma importância que você import o database. Aqui estão as instruções para importar um arquivo JSON para o MongoDB via shell e via Compass:
+   - Como você já baixou esse projeto com uma foto de modelo dentro de `CODIGO/public/uploads/NODEJS.png`, é de suma importância que você import o database.
+   Claro! Aqui estão as instruções para importar um arquivo JSON para o MongoDB via shell e via Compass:
 
    **Via Shell:**
 
@@ -95,7 +75,6 @@ unzip CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.zip
    - Certifique-se de ter um servidor MongoDB em execução localmente na porta padrão (27017), ou ajuste a URL de conexão de acordo com sua configuração.
 
 4. **Instalando as Depêndencias:**
-
    - Para instalar as dependências listadas no arquivo "package.json", você pode usar o comando `npm install` ou simplesmente `npm i` no terminal. Certifique-se de estar no diretório do seu projeto onde o arquivo "package.json" está localizado. O npm irá ler o arquivo "package.json" e instalar todas as dependências listadas nele. 
 
    - Aqui está o comando:
@@ -116,7 +95,6 @@ unzip CRUD-UPLOAD-DE-ARQUIVOS-EM-NODEJS.zip
    ```
 
 5. **Executando o Aplicativo:**
-
    - Para subir o servidor, no diretório do seu [projeto](./CODIGO/APP.js), digite o seguinte comando no Terminal/CMD:
    ```bash
    node APP.js
