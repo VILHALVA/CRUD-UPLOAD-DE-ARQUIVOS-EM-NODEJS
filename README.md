@@ -67,6 +67,7 @@ O aplicativo permite aos usuários realizar as seguintes operações:
 - Entendemos que para manipular arquivos em `HTML`, `CSS` e outras linguagens relacionadas, é necessário possuir conhecimento nessas áreas. Para auxiliar nesse aprendizado, oferecemos cursos gratuitos disponíveis:
 * [CURSO DE HTML E CSS](https://github.com/VILHALVA/CURSO-DE-HTML-E-CSS)
 * [CURSO DE NODEJS](https://github.com/VILHALVA/CURSO-DE-NODEJS)
+* [CURSO DE EJS](https://github.com/VILHALVA/CURSO-DE-EJS)
 * [CURSO DE MONGODB](https://github.com/VILHALVA/CURSO-DE-MONGODB)
 * [CONFIRA MAIS CURSOS](https://github.com/VILHALVA?tab=repositories&q=+topic:CURSO)
 
